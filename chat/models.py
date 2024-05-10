@@ -6,3 +6,5 @@ class Message(models.Model):
     timestamp = models.DateTimeField(auto_now_add=True)
     content = models.TextField()
     group_number = models.TextField()
+    def __str__(self):
+        return self.group_number
