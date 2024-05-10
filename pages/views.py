@@ -29,6 +29,8 @@ def about(request):
     return render(request,"about.html",{'DJANGO_SERVER_IP': settings.DJANGO_SERVER_IP})
 def courses_detail(request):
     return render(request,"course-details.html",{'DJANGO_SERVER_IP': settings.DJANGO_SERVER_IP})
+def subject_detail(request):
+    return render(request,"subject_details.html",{'DJANGO_SERVER_IP': settings.DJANGO_SERVER_IP})
 
 def FaQ(request):
     qna_data = [
