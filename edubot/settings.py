@@ -89,7 +89,7 @@ DATABASES = {
         'init_command': "SET sql_mode='ALLOW_INVALID_DATES'",
         "NAME": "edubot",
         'USER': 'root',
-        'PASSWORD': 'Shrish@2004',
+        'PASSWORD': '2345@#$%',
         'HOST':'localhost',
         'PORT':'3306',
     }
