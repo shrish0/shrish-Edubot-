@@ -22,7 +22,9 @@ load_dotenv()
 
 # Get the value of DJANGO_SERVER_IP variable from .env file
 DJANGO_SERVER_IP = os.getenv('DJANGO_SERVER_IP', 'localhost:8000')
+DJANGO_Mysql_Password = os.getenv('DJANGO_Mysql_Password', 'Shrish@20043')
 print(DJANGO_SERVER_IP )
+print(DJANGO_Mysql_Password )
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -89,7 +91,7 @@ DATABASES = {
         'init_command': "SET sql_mode='ALLOW_INVALID_DATES'",
         "NAME": "edubot",
         'USER': 'root',
-        'PASSWORD': '2345@#$%',
+        'PASSWORD': 'Shrish@2004',
         'HOST':'localhost',
         'PORT':'3306',
     }
