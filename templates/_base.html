@@ -53,9 +53,9 @@
 
         <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
           <ul class="navbar-nav">
-            <li><a href="index.html" id="home">Home</a></li>
-            <li><a href="about.html" id="about">About</a></li>
-            <li><a href="courses.html" id="courses">Courses</a></li>
+            <li><a href="http://{{DJANGO_SERVER_IP}}/index.html" id="home">Home</a></li>
+            <li><a href="http://{{DJANGO_SERVER_IP}}/about.html" id="about">About</a></li>
+            <li><a href="http://{{DJANGO_SERVER_IP}}/courses.html" id="courses">Courses</a></li>
             <!-- Dropdown -->
             
             <li class="dropdown">
@@ -63,30 +63,18 @@
                 More
               </a>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="FaQ.html">Faq</a>
-                <a class="dropdown-item" href="chat">Community</a>
+                <a class="dropdown-item" href="http://{{DJANGO_SERVER_IP}}/FaQ.html">Faq</a>
+                <a class="dropdown-item" href="http://{{DJANGO_SERVER_IP}}/chat">Community</a>
               </div>
             </li>
-            <li><a href="contacts.html" id="contact">Contacts</a></li>
-
             <li>
-              <button class="search">
-                <span class="lnr lnr-magnifier" id="search"></span>
-              </button>
+              <a href="http://{{DJANGO_SERVER_IP}}/contacts.html" id="contact">Contacts</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <div class="search-input" id="search-input-box">
-      <div class="container">
-        <form class="d-flex justify-content-between">
-          <input type="text" class="form-control" id="search-input" placeholder="Search Here" />
-          <button type="submit" class="btn"></button>
-          <span class="lnr lnr-cross" id="close-search" title="Close Search"></span>
-        </form>
-      </div>
-    </div>
+    
   </header>
   <!-- ================ End Header Area ================= -->
 
