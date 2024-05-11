@@ -23,6 +23,8 @@ you can also change it to your own
  use ths on the terminal where you run the project 
  python manage.py createsuperuser
 
+ now how to acess admin page http://127.0.0.1:8000/admin
+
  now if update something in model note you have to run this on terminal
  python manage.py makemigrations
  python manage.py migrate
