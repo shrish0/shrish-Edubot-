@@ -354,8 +354,6 @@ crossorigin="anonymous"></script>
                   // Data successfully fetched
                   // Replace the existing messages with the new ones
                   document.getElementById('message-container').innerHTML = xhr.responseText;
-                  // Scroll to the bottom to show the latest messages
-                  scrollToBottom();
               } else {
                   console.error('Error fetching new messages:', xhr.statusText);
               }
@@ -367,58 +365,7 @@ crossorigin="anonymous"></script>
   // Fetch new messages every 30 seconds
   setInterval(fetchNewMessages, 300); // Adjust the interval as needed
 
-  // Function to scroll to the bottom of the message container
-
-  //navbar
-  function w3_open(a) {
-      document.getElementById("mySidebar").style.display = "flex";
-      document.getElementById(a).setAttribute("onclick", "w3_close()");
-      document.getElementById('smore').innerHTML = ` <img src="{% static 'svg-d/x-lg.svg' %}">`;
-      document.getElementById('more').innerHTML = ` <img src="{% static 'svg-d/x-lg.svg' %}">`;
-      console.log(getElementById(a))
-  }
   
-  function w3_close() {
-   document.getElementById("mySidebar").style.display = "none";
-   document.getElementById('smore').setAttribute("onclick", "w3_open('smore')");
-   document.getElementById('more').setAttribute("onclick", "w3_open('more')");
-   
-   document.getElementById('more').innerHTML = ` <img src="{% static 'svg-d/list.svg' %}">`;
-   document.getElementById('smore').innerHTML = ` <img src="{% static 'svg-d/list.svg' %}">`;
-}
-
-
-function choice() {
-  let v1 = document.querySelector('#dropdown ul'); // Select the ul element inside the button
-  document.getElementById('dropdown').setAttribute("onclick", "choice2()");
-  document.getElementById('dropdown').style.background="black";
-  v1.style.display = 'block'; // Show the ul element
-  
- }
-
- function choice2(){
-  let v1 = document.querySelector('#dropdown ul'); // Select the ul element inside the button
-  document.getElementById('dropdown').setAttribute("onclick", "choice()");
-  v1.style.display = 'none';
-  document.getElementById('dropdown').style.background="none";
-
- }
-
-function choiceB() {
-  let v1 = document.querySelector('#dropdownB ul'); // Select the ul element inside the button
-  document.getElementById('dropdownB').setAttribute("onclick", "choice2B()");
-  document.getElementById('dropdownB').style.background="black";
-  v1.style.display = 'block'; // Show the ul element
-  
- }
-
- function choice2B(){
-  let v1 = document.querySelector('#dropdownB ul'); // Select the ul element inside the button
-  document.getElementById('dropdownB').setAttribute("onclick", "choiceB()");
-  v1.style.display = 'none';
-  document.getElementById('dropdownB').style.background="none";
-
- }
  </script>
 </body>
 
