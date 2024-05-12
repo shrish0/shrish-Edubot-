@@ -53,6 +53,9 @@
 
         <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
           <ul class="navbar-nav">
+            {% if user.is_authenticated %}
+            <li><a href="http://{{DJANGO_SERVER_IP}}/index.html" id="user">hello , {{request.user}}</a></li>
+            {% endif %}
             <li><a href="http://{{DJANGO_SERVER_IP}}/index.html" id="home">Home</a></li>
             <li><a href="http://{{DJANGO_SERVER_IP}}/about.html" id="about">About</a></li>
             <li><a href="http://{{DJANGO_SERVER_IP}}/courses.html" id="courses">Courses</a></li>
@@ -70,6 +73,15 @@
             <li>
               <a href="http://{{DJANGO_SERVER_IP}}/contacts.html" id="contact">Contacts</a>
             </li>
+            {% if user.is_authenticated %}
+            <li>
+              <a href="http://{{DJANGO_SERVER_IP}}/account/logout" id="contact">logout</a>
+            </li>
+            {% else %}
+            <li>
+              <a href="http://{{DJANGO_SERVER_IP}}/account/login" id="contact">login</a>
+            </li>
+            {% endif %}
           </ul>
         </div>
       </div>
