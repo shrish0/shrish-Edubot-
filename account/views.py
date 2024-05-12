@@ -34,7 +34,7 @@ def register(request):
             return render(request, "login.html")
     else:
         form = SignupForm()
-    return render(request, "register.html", {'form': form})
+    return render(request, "signup.html", {'form': form})
     
 # def register(request):
 #     if request.method == "POST" :

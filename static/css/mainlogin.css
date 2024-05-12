@@ -164,6 +164,7 @@
   }
   
   .container-login100 {
+    background: url("/static/img/login/bg-01.jpg");
     width: 100%;  
     min-height: 100vh;
     display: -webkit-box;
@@ -178,13 +179,17 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    backdrop-filter: blur(10px);
   }
   
   .wrap-login100 {
     width: 500px;
-    background: #fff;
+    background: transparent;
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
     border-radius: 10px;
     overflow: hidden;
+    backdrop-filter: blur(10px);
+    color: #ffff;
   }
   
   
